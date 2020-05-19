@@ -1,4 +1,5 @@
 package day00.ex01;
+
 import java.util.Scanner;
 
 public class Program
@@ -18,16 +19,15 @@ public class Program
 			System.out.print("Illegal Argument");
 			return;
 		}
-		r = 0;
-		for (i = 2; i * i <= n; i++)
+		r = 2;
+		for (i = 1; r * r <= n; i++)
 		{
-			r++;
-			if (n % i == 0)
+			if (n % r++ == 0)
 			{
 				prime = false;
 				break;
 			}
 		}
-		System.out.print(prime + " " + r);
+		System.out.print(prime + " " + i);
 	}
 }
